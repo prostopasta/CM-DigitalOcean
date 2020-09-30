@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   provisioner = Vagrant::Util::Platform.windows? ? :ansible_local : :ansible
 
   config.vm.define "ub20" do |host|
-    host.vm.network :private_network, ip: "192.168.33.13"
+    host.vm.network :private_network, ip: "192.168.43.10"
     host.vm.hostname = "ub20"
     host.vm.provision provisioner do |ansible|
       ansible.playbook = "playbook.yml"
